@@ -1,6 +1,8 @@
 # ouchi-se
 [キャリテク！マガジン](https://www.altx.co.jp/careetec/magazine/) 内で連載している「おうちSEになろう！」で使われたプログラムをまとめています。
 
+![おうちSEになろう](https://github.com/user-attachments/assets/13d4e47e-9e6c-4acc-8fdf-5df21f357354)
+
 ## 「おうちSEになろう！」とは
 この連載では、著者であるわたし自身による、家庭でのITスキル活用を促進する「おうちSE（システムエンジニア）」としての取り組みを紹介しています。
 
