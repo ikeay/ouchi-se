@@ -8,6 +8,8 @@
 
 連載内でのプログラムをこのリポジトリにまとめています。
 
+![おうちSEになろう](https://github.com/user-attachments/assets/13d4e47e-9e6c-4acc-8fdf-5df21f357354)
+
 ## 連載へのリンク
 - 第1回　2024-10-25
   - 記事: [【おうちSEになろう！】おうちSEになって、我が家をアップデートする！](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se1/)
