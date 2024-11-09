@@ -7,7 +7,8 @@
 - Poetry: パッケージ管理ツール
 
 ## セットアップ
-環境変数用のファイルをコピーして、先ほどコピーしたアクセストークンを .env ファイルに設定してください。
+環境変数用のファイルをコピーして、設定が必要な項目を .env ファイルに設定してください。
+詳しい設定方法等は記事を読んでください。
 
 ```bash
 cp env.example .env
@@ -26,7 +27,7 @@ poetry shell
 
 プログラムを実行
 ```bash
-python ouchi_se_02/reminder.py
+python ouchi_se_02/notification_daily.py
 ```
 
 プログラムを途中で止めるときは `Ctrl + C` で止めてください。
