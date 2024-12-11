@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ouchi-se-02"
+version = "0.1.0"
+description = ""
+authors = ["Ayaka Ikezawa <hello@ikeay.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+google-api-python-client = "^2.151.0"
+google-auth = "^2.36.0"
+discord-py = "^2.4.0"
+schedule = "^1.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

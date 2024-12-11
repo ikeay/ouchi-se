@@ -14,3 +14,6 @@
 - 第1回　2024-10-25
   - 記事: [【おうちSEになろう！】おうちSEになって、我が家をアップデートする！](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se1/)
   - [プログラム](/01)
+- 第2回
+  - 記事: [【おうちSEになろう！】おうちチャットで動くBotをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se2/)
+  - [プログラム](/02)
