@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ouch-se-04"
+version = "0.1.0"
+description = ""
+authors = ["Ayaka Ikezawa"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+google-api-python-client = "^2.157.0"
+google-auth = "^2.37.0"
+fastapi = "^0.115.6"
+pillow = "^11.1.0"
+cairosvg = "^2.7.1"
+httpx = "^0.28.1"
+uvicorn = "^0.34.0"
+rshell = "^0.0.36"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
