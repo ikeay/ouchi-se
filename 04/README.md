@@ -2,14 +2,15 @@
 連載へのリンクはこちら
  [【おうちSEになろう！】玄関に置くデジタルお知らせボードをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se4/)
 
-## API
+## バックエンドAPI
 ### 環境
 - Python 3.12
 - Poetry: パッケージ管理ツール
+- Fast　API: 使用フレームワーク
 
 ### セットアップ
 環境変数用のファイルをコピーして、設定が必要な項目を .env ファイルに設定してください。
-詳しい設定方法等は記事を読んでください。
+Google カレンダーのクレデンシャルの取得の仕方など、詳しい設定方法等は[以前の記事（【おうちSEになろう！】おうちチャットで動くBotをつくる）](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se2/)を参考にしてください。
 
 ```bash
 cp env.example .env
