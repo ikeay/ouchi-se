@@ -2,7 +2,7 @@
 連載へのリンクはこちら
  [【おうちSEになろう！】玄関に置くデジタルお知らせボードをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se4/)
 
-## バックエンドAPI
+## バックエンドAPI　側
 ### 環境
 - Python 3.12
 - Poetry: パッケージ管理ツール
@@ -33,3 +33,6 @@ uvicorn ouchi_se_04.notice_board_api:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 プログラムを途中で止めるときは `Ctrl + C` で止めてください。
+
+## 表示デバイス側
+[README](./rbp/README.md) を参照
