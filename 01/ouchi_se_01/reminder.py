@@ -17,7 +17,7 @@ def task_reminder(task):
     pb.push_note("今日のタスク", task)
 
 # 毎朝8時にリマインダーをセット
-schedule.every().day.at("23:55").do(lambda: task_reminder("今日もスクワット30回だ！"))
+schedule.every().day.at("08:00").do(lambda: task_reminder("今日もスクワット30回だ！"))
 
 while True:
     schedule.run_pending()
