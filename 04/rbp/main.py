@@ -29,12 +29,19 @@
 
 import framebuf
 import network
+import sys
 import time
 import urequests as requests
 import utime
 
 from machine import Pin, SPI
 from misakifont import MisakiFont
+
+import binascii
+import json
+import ubinascii
+from machine import Pin, SPI
+import framebuf
 
 EPD_WIDTH       = 122
 EPD_HEIGHT      = 250
@@ -378,7 +385,7 @@ def replace_unsupported_char(str):
     str = str.replace("-", "−") # ハイフンが表示できないのでマイナス記号に変換
     return str
 
-def connect_to_wifi(ssid, password):
+def connect_to_wifi_old(ssid, password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active
     wlan.connect(ssid, password)
@@ -397,13 +404,31 @@ def connect_to_wifi(ssid, password):
         status = wlan.ifconfig()
         print("IP Address: ", status[0])
 
-if __name__=='__main__':
-    import binascii
-    import json
-    import ubinascii
-    from machine import Pin, SPI
-    import framebuf
+def connect_to_wifi(ssid, password):
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)  # Wi-Fiを有効化
 
+    wlan.connect(ssid, password)
+    max_wait = 20  # タイムアウト秒数
+
+    while max_wait > 0:
+        status = wlan.status()
+        if status < 0 or status >= 3:  # エラーまたは成功
+            break
+        print("Connecting to WiFi...")
+        time.sleep(1)
+        max_wait -= 1
+
+    # ステータスに応じて処理
+    if wlan.status() != 3:
+        print("WiFi connection failed")
+        print(f"WiFi status: {wlan.status()}")
+        raise RuntimeError("Failed to connect to WiFi")
+    else:
+        print("Connected to WiFi")
+        print(f"IP Address: {wlan.ifconfig()[0]}")
+
+def run_main_process():
     # フォントの読み込み
     mf = MisakiFont()
 
@@ -420,21 +445,33 @@ if __name__=='__main__':
         connect_to_wifi(ssid, password)
     except Exception as e:
         print("Error: ", e)
-        jpblacktext("Wi-Fi接続に失敗しました。", 10, 10, mf, epd)
+        jpblacktext("Wi-Fi接続に失敗しましたあ！", 12, 10, mf, epd)
+        epd.display()
+        epd.sleep()
+        return
 
     # APIからデータを取得
-    url = "http://192.168.1.100/api/notice_board" # IPアドレスは適宜書き換える
+    url = "http://192.168.1.100:8000/api/notice_board" # IPアドレスは適宜書き換える
     data = None
 
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=120)
+        print("ステータスコード:", response.status_code)  # HTTPステータスコード
+        print("レスポンスヘッダー:")
+        for key, value in response.headers.items():
+            print(f"  {key}: {value}")  # レスポンスヘッダーを表示
+        print("レスポンスボディ:")
+        print(response.text)  # レスポンスの本文（文字列として取得）
         if response.status_code == 200:
             data = json.loads(response.text)
         else:
             raise RuntimeError("Failed to get data from server")
     except Exception as e:
         print("Error: ", e)
-        jpblacktext("データが取得できませんでした。", 10, 10, mf, epd)
+        jpblacktext("データが取得できませんでした。", 12, 10, mf, epd)
+        epd.display()
+        epd.sleep()
+        return
 
     finally:
         # リソースを解放
@@ -507,3 +544,8 @@ if __name__=='__main__':
     # スリープモード
     epd.sleep()
 
+
+if __name__=='__main__':
+    while True:
+        run_main_process()
+        time.sleep(60 * 60) # 1時間ごとに更新
