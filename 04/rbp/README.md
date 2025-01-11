@@ -8,6 +8,8 @@ Raspberry Pi Pico に書き込むお知らせボードのプログラム。Googl
 ## 仕様
 - MicroPython
 - MisakiFont で日本語対応
+- 電子ペーパーは以下を使用
+  - [WAVESHARE 社の 2.13 インチ の電子ペーパー](https://www.switch-science.com/products/7321)
 
 ## プログラム使用の際の注意点
   - 日本語の表示には以下のプロジェクトを利用。Raspberry Pi Pico にフォントをアップロードして使う。
