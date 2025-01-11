@@ -20,3 +20,6 @@
 - 第3回
   - 記事: [【おうちSEになろう！】Raspberry Pi で遊ぼう](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se3/)
   - [プログラム](/03)
+- 第4回
+  - 記事: [【おうちSEになろう！】玄関で活躍するお知らせボードをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se4/)
+  - [プログラム](/04)
