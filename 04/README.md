@@ -10,11 +10,14 @@
 
 ### セットアップ
 環境変数用のファイルをコピーして、設定が必要な項目を .env ファイルに設定してください。
-Google カレンダーのクレデンシャルの取得の仕方など、詳しい設定方法等は[以前の記事（【おうちSEになろう！】おうちチャットで動くBotをつくる）](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se2/)を参考にしてください。
+詳しい設定方法等は[以前の記事（【おうちSEになろう！】おうちチャットで動くBotをつくる）](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se2/)を参考にしてください。
 
 ```bash
 cp env.example .env
 ```
+
+Google Calendar APIも使用するので `credentials.json` を取得し、 `ouchi-se/02/ouchi_se_02/` のディレクトリに置いてください。
+詳しい設定方法等は [【おうちSEになろう！】おうちチャットで動くBotをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se2/)に記述しています。
 
 プロジェクトのディレクトリに移動し、pyproject.tomlに基づいて依存関係をインストールします。
 
@@ -23,6 +26,9 @@ poetry install
 ```
 
 仮想環境をアクティブにするには、以下のコマンドを使用します。
+poetry のバージョンが2.0以降の場合は、`poetry shell` ではなく、 `poetry env activate` を使用してください。
+実行時に表示される source コマンドも実行してください。
+
 ```bash
 poetry shell
 ```

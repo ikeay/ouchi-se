@@ -25,6 +25,9 @@ poetry install
 ```
 
 仮想環境をアクティブにするには、以下のコマンドを使用します。
+poetry のバージョンが2.0以降の場合は、`poetry shell` ではなく、 `poetry env activate` を使用してください。
+実行時に表示される source コマンドも実行してください。
+
 ```bash
 poetry shell
 ```
