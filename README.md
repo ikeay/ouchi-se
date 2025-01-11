@@ -17,3 +17,6 @@
 - 第2回 2024.12.10
   - 記事: [【おうちSEになろう！】おうちチャットで動くBotをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se2/)
   - [プログラム](/02)
+- 第3回
+  - 記事: [【おうちSEになろう！】Raspberry Pi で遊ぼう](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se3/)
+  - [プログラム](/03)
