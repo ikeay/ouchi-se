@@ -2,6 +2,8 @@
 連載へのリンクはこちら
  [【おうちSEになろう！】玄関に置くデジタルお知らせボードをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se4/)
 
+![PXL_20250110_181937475](https://github.com/user-attachments/assets/4fb7be1f-7fe7-4bfa-8300-f97d66798048)
+
 ## バックエンドAPI　側
 ### 環境
 - Python 3.12
