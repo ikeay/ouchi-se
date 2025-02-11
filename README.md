@@ -23,3 +23,6 @@
 - 第4回
   - 記事: [【おうちSEになろう！】玄関で活躍するお知らせボードをつくる](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se4/)
   - [プログラム](/04)
+- 第5回
+  - 記事: [【おうちSEになろう！】自動で情報を収集するAIプログラムをかこう](https://www.altx.co.jp/careetec/magazine/column/ikezawa-home-se5/)
+  - [プログラム](/05)

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ouchi-se-05"
+version = "0.1.0"
+description = ""
+authors = ["Ayaka Ikezawa"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.13.3"
+python-dotenv = "^1.0.1"
+openai = "^1.61.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
