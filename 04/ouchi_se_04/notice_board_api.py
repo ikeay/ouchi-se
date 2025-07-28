@@ -43,7 +43,7 @@ async def get_google_calendar_events():
 async def get_today_weather():
     try:
         # Tsukumijima APIへのリクエスト
-        url = f"http://weather.tsukumijima.net/api/forecast/city/{CITY_CODE}"
+        url = f"https://weather.tsukumijima.net/api/forecast/city/{CITY_CODE}"
         async with httpx.AsyncClient() as client:
             response = await client.get(url)
             response.raise_for_status()  # ステータスコードが200以外なら例外を発生
